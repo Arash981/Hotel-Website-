@@ -1,0 +1,122 @@
+/* Importing the Poppins font from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* Defining CSS variables for theme colors, text colors, and layout */
+:root {
+    --primary-color: #e82574; /* Main theme color */
+    --primary-color-dark: #bc1c5c; /* Darker shade of the main theme color */
+    --text-dark: #0c0a09; /* Dark color for text */
+    --text-light: #78716c; /* Light color for secondary text */
+    --white: #ffffff; /* White color */
+    --max-width: 1200px; /* Maximum width for containers */
+}
+
+/* Resetting default margin, padding, and setting box-sizing for all elements */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Styling for a container section */
+.section__container {
+    max-width: var(--max-width); /* Max width as defined in variables */
+    margin: auto; /* Center the container */
+    padding: 5rem 1rem; /* Vertical and horizontal padding */
+}
+
+/* Styling for subheaders in sections */
+.section__subheader {
+    margin-bottom: 0.5rem; /* Space below the subheader */
+    position: relative; /* Positioning for ::after pseudo-element */
+    font-weight: 500; /* Medium font weight */
+    letter-spacing: 2px; /* Spacing between letters */
+    color: var(--text-dark); /* Dark text color */
+}
+
+/* Adding a decorative line to the subheader */
+.section__subheader::after {
+    position: absolute; /* Positioned relative to the subheader */
+    content: ""; /* Empty content for the decorative line */
+    top: 50%; /* Vertical center alignment */
+    transform: translate(1rem, -50%); /* Position adjustment */
+    height: 2px; /* Line thickness */
+    width: 4rem; /* Line length */
+    background-color: var(--primary-color); /* Line color */
+}
+
+/* Styling for main headers in sections */
+.section__header {
+    max-width: 600px; /* Max width for better readability */
+    margin-bottom: 1rem; /* Space below the header */
+    font-size: 2.5rem; /* Large font size */
+    font-weight: 600; /* Semi-bold font weight */
+    line-height: 3rem; /* Space between lines */
+    color: var(--text-dark); /* Dark text color */
+}
+
+/* Styling for section descriptions */
+.section__description {
+    max-width: 600px; /* Limit width for readability */
+    margin-bottom: 1rem; /* Space below the description */
+    color: var(--text-light); /* Light text color */
+}
+
+/* Button styling */
+.btn {
+    padding: 0.75rem 1.5rem; /* Button padding */
+    outline: none; /* Remove default outline */
+    border: none; /* Remove border */
+    font-size: 1rem; /* Font size */
+    font-weight: 500; /* Medium font weight */
+    color: var(--white); /* White text color */
+    background-color: var(--primary-color); /* Background color */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for buttons */
+.btn:hover {
+    background-color: var(--primary-color-dark); /* Darker background on hover */
+}
+
+/* Image styling */
+img {
+    width: 100%; /* Full width image */
+    display: flex; /* Flexible box layout */
+}
+
+/* Anchor tag styling */
+a {
+    text-decoration: none; /* Remove underline from links */
+}
+
+/* Logo styling */
+.logo {
+    max-width: 120px; /* Limit the width of the logo */
+}
+
+/* Global body styling */
+body {
+    font-family: "poppins", sans-serif; /* Poppins font with sans-serif fallback */
+}
+
+/* Header section styling */
+.header {
+    background-image: url("assets/header.jpg"); /* Background image for the header */
+    background-position: center center; /* Center the image */
+    background-size: cover; /* Cover the entire background */
+    background-repeat: no-repeat; /* Prevent image repetition */
+}
+
+/* Navigation bar styling */
+nav {
+    position: fixed; /* Fixed position at the top */
+    isolation: isolate; /* Create a new stacking context */
+    top: 0; /* Position at the top */
+    width: 100%; /* Full width */
+    max-width: var(--max-width); /* Max width as defined in variables */
+    margin: auto; /* Center the nav bar */
+    z-index: 9; /* Ensure it stays on top */
+}
