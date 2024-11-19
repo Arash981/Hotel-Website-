@@ -1,173 +1,157 @@
-/* Importing the Poppins font from Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
-/* Defining CSS variables for theme colors, text colors, and layout */
 :root {
-    --primary-color: #e82574; /* Main theme color */
-    --primary-color-dark: #bc1c5c; /* Darker shade of the main theme color */
-    --text-dark: #0c0a09; /* Dark color for text */
-    --text-light: #78716c; /* Light color for secondary text */
-    --white: #ffffff; /* White color */
-    --max-width: 1200px; /* Maximum width for containers */
+  --primary-color: #e82574;
+  --primary-color-dark: #bc1c5c;
+  --text-dark: #0c0a09;
+  --text-light: #78716c;
+  --white: #ffffff;
+  --max-width: 1200px;
 }
 
-/* Resetting default margin, padding, and setting box-sizing for all elements */
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-/* Styling for a container section */
 .section__container {
-    max-width: var(--max-width); /* Max width as defined in variables */
-    margin: auto; /* Center the container */
-    padding: 5rem 1rem; /* Vertical and horizontal padding */
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem 1rem;
 }
 
-/* Styling for subheaders in sections */
 .section__subheader {
-    margin-bottom: 0.5rem; /* Space below the subheader */
-    position: relative; /* Positioning for ::after pseudo-element */
-    font-weight: 500; /* Medium font weight */
-    letter-spacing: 2px; /* Spacing between letters */
-    color: var(--text-dark); /* Dark text color */
+  margin-bottom: 0.5rem;
+  position: relative;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: var(--text-dark);
 }
 
-/* Adding a decorative line to the subheader */
 .section__subheader::after {
-    position: absolute; /* Positioned relative to the subheader */
-    content: ""; /* Empty content for the decorative line */
-    top: 50%; /* Vertical center alignment */
-    transform: translate(1rem, -50%); /* Position adjustment */
-    height: 2px; /* Line thickness */
-    width: 4rem; /* Line length */
-    background-color: var(--primary-color); /* Line color */
+  position: absolute;
+  content: "";
+  top: 50%;
+  transform: translate(1rem, -50%);
+  height: 2px;
+  width: 4rem;
+  background-color: var(--primary-color);
 }
 
-/* Styling for main headers in sections */
 .section__header {
-    max-width: 600px; /* Max width for better readability */
-    margin-bottom: 1rem; /* Space below the header */
-    font-size: 2.5rem; /* Large font size */
-    font-weight: 600; /* Semi-bold font weight */
-    line-height: 3rem; /* Space between lines */
-    color: var(--text-dark); /* Dark text color */
+  max-width: 600px;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 3rem;
+  color: var(--text-dark);
 }
 
-/* Styling for section descriptions */
 .section__description {
-    max-width: 600px; /* Limit width for readability */
-    margin-bottom: 1rem; /* Space below the description */
-    color: var(--text-light); /* Light text color */
+  max-width: 600px;
+  margin-bottom: 1rem;
+  color: var(--text-light);
 }
 
-/* Button styling */
 .btn {
-    padding: 0.75rem 1.5rem; /* Button padding */
-    outline: none; /* Remove default outline */
-    border: none; /* Remove border */
-    font-size: 1rem; /* Font size */
-    font-weight: 500; /* Medium font weight */
-    color: var(--white); /* White text color */
-    background-color: var(--primary-color); /* Background color */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: 0.3s; /* Smooth transition for hover effect */
+  padding: 0.75rem 1.5rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--white);
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-/* Hover effect for buttons */
 .btn:hover {
-    background-color: var(--primary-color-dark); /* Darker background on hover */
+  background-color: var(--primary-color-dark);
 }
 
-/* Image styling */
 img {
-    width: 100%; /* Full width image */
-    display: flex; /* Flexible box layout */
+  width: 100%;
+  display: flex;
 }
 
-/* Anchor tag styling */
 a {
-    text-decoration: none; /* Remove underline from links */
+  text-decoration: none;
 }
 
-/* Logo styling */
 .logo {
-    max-width: 120px; /* Limit the width of the logo */
+  max-width: 120px;
 }
 
-/* Global body styling */
+html,
 body {
-    font-family: "poppins", sans-serif; /* Poppins font with sans-serif fallback */
+  scroll-behavior: smooth;
 }
 
-/* Header section styling */
+body {
+  font-family: "Poppins", sans-serif;
+}
+
 .header {
-    background-image: url("assets/header.jpg"); /* Background image for the header */
-    background-position: center center; /* Center the image */
-    background-size: cover; /* Cover the entire background */
-    background-repeat: no-repeat; /* Prevent image repetition */
+  background-image: url("assets/header.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-/* Navigation bar styling */
 nav {
-    position: fixed; /* Fixed position at the top */
-    isolation: isolate; /* Create a new stacking context */
-    top: 0; /* Position at the top */
-    width: 100%; /* Full width */
-    max-width: var(--max-width); /* Max width as defined in variables */
-    margin: auto; /* Center the nav bar */
-    z-index: 9; /* Ensure it stays on top */
+  position: fixed;
+  isolation: isolate;
+  top: 0;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: auto;
+  z-index: 9;
 }
 
-
-.nav__bar 
-{
-    padding: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-    background-color: var(--primary-color);
+.nav__bar {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  background-color: var(--primary-color);
 }
 
-.nav__menu__btn 
-{
-    font-size: 1.5rem;
-    color: var(--white);
-    cursor:pointer;
+.nav__menu__btn {
+  font-size: 1.5rem;
+  color: var(--white);
+  cursor: pointer;
 }
 
-.nav__links 
-{
-    list-style: none;
-    position: absolute;
-    width: 100%;
-    padding: 2rem;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 2rem;
-    background-color: rgba(188, 28, 92, 0.9);
-    /* transform: translate(-100%); */
-    transition: .5s;
-    z-index: -1;
+.nav__links {
+  list-style: none;
+  position: absolute;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: rgba(188, 28, 92, 0.9);
+  transform: translateY(-100%);
+  transition: 0.5s;
+  z-index: -1;
 }
 
-.nav__links.open{
-    transform: translateY(0);
+.nav__links.open {
+  transform: translateY(0);
 }
 
-.nav__links a 
-{
-    position:  relative;
-    isolation: isolate;
-    padding-bottom: 8px;
-    color: var(--white);
-    transition: 0.3s; 
+.nav__links a {
+  position: relative;
+  isolation: isolate;
+  padding-bottom: 8px;
+  color: var(--white);
+  transition: 0.3s;
 }
 
 .nav__btn {
-    display: none;
+  display: none;
 }
