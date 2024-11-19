@@ -139,7 +139,7 @@ nav {
   transition: 0.5s;
   z-index: -1;
 }
-
+ 
 .nav__links.open {
   transform: translateY(0);
 }
@@ -155,3 +155,41 @@ nav {
 .nav__btn {
   display: none;
 }
+
+@media (width >768px)
+{
+    nav 
+    {
+        padding:  2rem 1rem ;
+        position: static;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav__bar 
+    {
+        padding: 0; 
+        background-color: transparent;
+
+    }
+
+    .nav__menu__btn 
+    {
+        display: none;
+    }
+
+    .nav__links 
+    {
+        padding: 0;
+        width:unset;
+        position: static;
+        transform: none; 
+        flex-direction: row;
+        background-color: transparent;
+    }
+
+    .nav__btn{
+        display: block;
+    }
+} 
