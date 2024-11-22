@@ -234,6 +234,10 @@ nav {
     border: none;
 }
 
+.input__group input::placeholder {
+    color: var(--text-light);
+  }
+
 
 @media (width >768px)
 {
