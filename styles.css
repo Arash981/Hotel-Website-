@@ -248,8 +248,7 @@ nav {
 .about__image img {
     max-width: 450px;
     margin:auto;
-    border-radius: 5px;
-    
+    border-radius: 5px; 
 }
 
 
@@ -304,6 +303,13 @@ nav {
 
     .nav__links a:hover::after {
         width: 100%;
+      }
+
+      .about__container
+      {
+        grid-template-columns:repeat(2, 1fr);
+        align-items: center;
+
       }
     }
  
