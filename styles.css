@@ -309,6 +309,41 @@ nav {
     color: #60a5fa;
 }
 
+.room__card__details
+{
+    padding: 1rem;
+}
+
+.room__card h4{
+    margin-bottom: .5rem;
+    font-size: 1.2rem;
+    font-weight:500;
+    color: var(--text-dark);  
+}
+
+.room__card p {
+    margin-bottom: .5rem;
+    color: var(--text-light);
+}
+
+.room__card h5 {
+  margin-bottom:1rem; 
+  font-size: 1rem; 
+  font-weight: 500;
+  color: var(--text-light);
+}
+
+.room__card h5 span {
+    font-size:1.1rem;
+    color: var(--text-dark);
+
+}
+
+@media (width > 576px) {
+    .room__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+}
 
 @media (width >768px)
 {
@@ -367,7 +402,21 @@ nav {
       {
         grid-template-columns:repeat(2, 1fr);
         align-items: center;
+      }
+
+      .room__grid 
+      {
+        grid-template-columns: repeat(3, 1fr);
 
       }
+    }
+
+    @media (width > 1024)
+    {
+        .room__grid 
+        {
+            gap:2rem;
+
+        }
     }
  

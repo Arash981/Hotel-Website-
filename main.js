@@ -58,3 +58,8 @@ ScrollReveal().reveal(".about__image img", {
     delay: 2000,
   });
 
+//room container 
+ScrollReveal().reveal(".room__card",{
+    ...scrollRevealOption,
+    interval: 500,
+} );
