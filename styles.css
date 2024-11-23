@@ -336,8 +336,33 @@ nav {
 .room__card h5 span {
     font-size:1.1rem;
     color: var(--text-dark);
+}
+
+.service 
+{
+    background-image: url("assets/service.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.service__container 
+{
+    padding-block: 0;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.service__content 
+{
+    grid-column: 1/3;
+    padding: 2rem 4rem;
+    background-color: var(--white);
 
 }
+
+
+
 
 @media (width > 576px) {
     .room__grid {
